@@ -1,0 +1,26 @@
+{
+  "name": "profanity-filter",
+  "description": "A node.js utility for masking words or phrases in strings that aren't allowed.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jwils0n/profanity-filter",
+  "author": {
+    "name": "James Wilson",
+    "email": "james@jwilson.us",
+    "url": "https://github.com/jwils0n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jwils0n/profanity-filter.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jwils0n/profanity-filter/LICENSE"
+    }
+  ],
+  "main": "lib/filter",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "keywords": []
+}
