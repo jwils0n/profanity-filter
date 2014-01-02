@@ -1,4 +1,6 @@
-# profanity-filter [![Build Status](https://travis-ci.org/jwils0n/profanity-filter.png)](https://travis-ci.org/jwils0n/profanity-filter)
+# profanity-filter
+
+[![Build Status](https://travis-ci.org/jwils0n/profanity-filter.png)](https://travis-ci.org/jwils0n/profanity-filter)
 
 A static node.js utility for masking words or phrases in strings that aren't allowed.
 
@@ -36,7 +38,7 @@ filter.seed('profanities');
 
 ###filter.debug()
 
-Returns the wordList, replacementMethod, and grawlixChars internal properties for debugging purposes.
+Returns the dictionary, replacementMethod, and grawlixChars internal properties for debugging purposes.
 
 ```javascript
 var filter = require('filter');
