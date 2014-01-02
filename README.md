@@ -1,6 +1,6 @@
-# profanity-filter
+# profanity-filter [![Build Status](https://travis-ci.org/jwils0n/profanity-filter.png)](https://travis-ci.org/jwils0n/profanity-filter)
 
-A static node.js utility for masking words or phrases in strings that aren't allowed. [![Build Status](https://travis-ci.org/jwils0n/profanity-filter.png)](https://travis-ci.org/jwils0n/profanity-filter)
+A static node.js utility for masking words or phrases in strings that aren't allowed.
 
 ## configuration
 
