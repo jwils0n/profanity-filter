@@ -28,5 +28,5 @@
   "scripts": {
     "test": "mocha"
   },
-  "keywords": ["curse", "words", "string", "bad", "unallowed", "profanity", "filter", "clean"],
+  "keywords": ["curse", "words", "string", "bad", "unallowed", "profanity", "filter", "clean"]
 }

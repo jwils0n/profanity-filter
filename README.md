@@ -6,9 +6,11 @@ A static node.js utility for masking words or phrases in strings that aren't all
 
 There are three methods of replacement, outlined below ('word' requires you specify a replacement for each word):
 
-* stars   - That **** UX change was such a pain in the ***
-* grawlix - That &!%$ UX change was such a pain in the #@%
-* word    - That darn UX change was such a pain in the badonkadonk
+```javascript
+stars   - That **** UX change was such a pain in the ***
+grawlix - That &!%$ UX change was such a pain in the #@%
+word    - That darn UX change was such a pain in the badonkadonk
+```
 
 Note: 'stars' is the default method of replacement
 
@@ -76,3 +78,5 @@ Removes a word from the internal replacement dicitonary.
 var filter = require('filter');
 filter.config.removeWord('ass');
 ```
+
+[![Build Status](https://travis-ci.org/jdwils0n/profanity-filter.png)](https://travis-ci.org/jwils0n/profanity-filter)
