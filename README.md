@@ -43,38 +43,38 @@ var filter = require('filter');
 filter.debug()
 ```
 
-### filter.config.setReplacementMethod(string)
+### filter.setReplacementMethod(string)
 
 Globally sets the method of replacement. Accepts 'stars', 'word', and 'grawlix'.
 
 ```javascript
 var filter = require('filter');
-filter.config.setReplacementMethod('grawlix');
+filter.setReplacementMethod('grawlix');
 ```
 
-### filter.config.setGrawlixChars(array)
+### filter.setGrawlixChars(array)
 
 Globally sets the grawlix characters to be used as replacements, if grawlix is the current replacementMethod.
 
 ```javascript
 var filter = require('filter');
-filter.config.setGrawlixChars(['1', '2', '3', '4', '5', '6']);
+filter.setGrawlixChars(['1', '2', '3', '4', '5', '6']);
 ```
 
-### filter.config.addWord(string, [string])
+### filter.addWord(string, [string])
 
 Adds a word to the internal replacement dictionary. The optional second parameter is used if the replacementMethod is set to 'word'. If the word method is set and no replacement is passed, the filter will default to 'BLEEP'.
 
 ```javascript
 var filter = require('filter');
-filter.config.addWord('ass', 'badonkadonk');
+filter.addWord('ass', 'badonkadonk');
 ```
 
-### filter.config.removeWord(string)
+### filter.removeWord(string)
 
 Removes a word from the internal replacement dicitonary.
 
 ```javascript
 var filter = require('filter');
-filter.config.removeWord('ass');
+filter.removeWord('ass');
 ```

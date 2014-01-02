@@ -13,8 +13,8 @@ var fixtures = {
 
 describe('clean', function () {
 
-	filter.config.addWord('damn', 'dad-gum');
-	filter.config.addWord('ass', 'badonkadonk');
+	filter.addWord('damn', 'dad-gum');
+	filter.addWord('ass', 'badonkadonk');
 
 	it('should replace the unallowed words', function () {
 		var filteredString = filter.clean(fixtures.string);
@@ -24,15 +24,15 @@ describe('clean', function () {
 	});
 
 	it('should replace the correct number of characters for grawlix/stars methods', function () {
-		filter.config.setReplacementMethod('stars');
+		filter.setReplacementMethod('stars');
 		assert.equal(filter.clean(fixtures.string).length, fixtures.string.length);
 
-		filter.config.setReplacementMethod('grawlix');
+		filter.setReplacementMethod('grawlix');
 		assert.equal(filter.clean(fixtures.string).length, fixtures.string.length);
 	});
 
 	it('should replace the unallowed words with the replacement for "word" method', function () {
-		filter.config.setReplacementMethod('word');
+		filter.setReplacementMethod('word');
 
 		var filteredString = filter.clean(fixtures.string);
 
@@ -44,40 +44,40 @@ describe('clean', function () {
 describe('config', function () {
 
 	beforeEach(function () {
-		filter.config.removeWord('damn');
-		filter.config.removeWord('ass');
-		filter.config.setReplacementMethod('stars');
-		filter.config.setGrawlixChars(['!','@','#','$','%','&','*']);
+		filter.removeWord('damn');
+		filter.removeWord('ass');
+		filter.setReplacementMethod('stars');
+		filter.setGrawlixChars(['!','@','#','$','%','&','*']);
 	});
 
 	it('should be able to add words to the unallowed list', function () {
 		assert.notEqual(filter.clean(fixtures.string).indexOf('damn'), -1);
 
-		filter.config.addWord('damn');
+		filter.addWord('damn');
 
 		assert.equal(filter.clean(fixtures.string).indexOf('damn'), -1);
 	});
 
 	it('should be able to remove words from the unallowed list', function () {
-		filter.config.addWord('damn');
+		filter.addWord('damn');
 		assert.equal(filter.clean(fixtures.string).indexOf('damn'), -1);
 
-		filter.config.removeWord('damn');
+		filter.removeWord('damn');
 		assert.notEqual(filter.clean(fixtures.string).indexOf('damn'), -1);
 	});
 
 	it('should be able to change the replacement method', function () {
 		var filteredStrings = {};
 
-		filter.config.addWord('damn', 'dad-gum');
+		filter.addWord('damn', 'dad-gum');
 
-		filter.config.setReplacementMethod('stars');
+		filter.setReplacementMethod('stars');
 		filteredStrings.stars = filter.clean(fixtures.string);
 
-		filter.config.setReplacementMethod('grawlix');
+		filter.setReplacementMethod('grawlix');
 		filteredStrings.grawlix = filter.clean(fixtures.string);
 
-		filter.config.setReplacementMethod('word');
+		filter.setReplacementMethod('word');
 		filteredStrings.word = filter.clean(fixtures.string);
 
 		assert.notEqual(filteredStrings.stars, filteredStrings.grawlix);
@@ -86,12 +86,12 @@ describe('config', function () {
 	});
 
 	it('should be able to change the grawlix characters', function () {
-		filter.config.addWord('damn');
-		filter.config.setReplacementMethod('grawlix');
+		filter.addWord('damn');
+		filter.setReplacementMethod('grawlix');
 
 		assert.equal(filter.clean(fixtures.string).indexOf('++++'), -1);
 
-		filter.config.setGrawlixChars(['+']);
+		filter.setGrawlixChars(['+']);
 		assert.notEqual(filter.clean(fixtures.string).indexOf('++++'), -1);
 	});
 
