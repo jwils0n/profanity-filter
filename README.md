@@ -79,4 +79,4 @@ var filter = require('filter');
 filter.config.removeWord('ass');
 ```
 
-[![Build Status](https://travis-ci.org/jdwils0n/profanity-filter.png)](https://travis-ci.org/jwils0n/profanity-filter)
+[![Build Status](https://travis-ci.org/jwils0n/profanity-filter.png)](https://travis-ci.org/jwils0n/profanity-filter)
