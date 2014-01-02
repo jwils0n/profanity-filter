@@ -22,5 +22,11 @@
   "engines": {
     "node": ">= 0.8.0"
   },
-  "keywords": []
+  "devDependencies":{
+    "mocha":"1.16.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": ["curse", "words", "string", "bad", "unallowed", "profanity", "filter", "clean"],
 }
