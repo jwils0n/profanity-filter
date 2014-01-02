@@ -1,6 +1,6 @@
 # profanity-filter
 
-A static node.js utility for masking words or phrases in strings that aren't allowed.
+A static node.js utility for masking words or phrases in strings that aren't allowed. [![Build Status](https://travis-ci.org/jwils0n/profanity-filter.png)](https://travis-ci.org/jwils0n/profanity-filter)
 
 ## configuration
 
@@ -78,5 +78,3 @@ Removes a word from the internal replacement dicitonary.
 var filter = require('filter');
 filter.config.removeWord('ass');
 ```
-
-[![Build Status](https://travis-ci.org/jwils0n/profanity-filter.png)](https://travis-ci.org/jwils0n/profanity-filter)
