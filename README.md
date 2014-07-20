@@ -23,7 +23,7 @@ Note: 'stars' is the default method of replacement
 Takes supplied string and runs the filter based on the current dictionary of unallowed words and replacement method. Returns the filtered string.
 
 ```javascript
-var filter = require('filter');
+var filter = require('profanity-filter');
 console.log(filter.clean('String I\'d like to filter for inappropriate words.'));
 ```
 
@@ -32,7 +32,7 @@ console.log(filter.clean('String I\'d like to filter for inappropriate words.'))
 Populates the internal filter dictionary using a seed data JSON file (must live in lib/seeds).
 
 ```javascript
-var filter = require('filter');
+var filter = require('profanity-filter');
 filter.seed('profanities');
 ```
 
@@ -41,7 +41,7 @@ filter.seed('profanities');
 Returns the dictionary, replacementMethod, and grawlixChars internal properties for debugging purposes.
 
 ```javascript
-var filter = require('filter');
+var filter = require('profanity-filter');
 filter.debug()
 ```
 
@@ -50,7 +50,7 @@ filter.debug()
 Globally sets the method of replacement. Accepts 'stars', 'word', and 'grawlix'.
 
 ```javascript
-var filter = require('filter');
+var filter = require('profanity-filter');
 filter.setReplacementMethod('grawlix');
 ```
 
@@ -59,7 +59,7 @@ filter.setReplacementMethod('grawlix');
 Globally sets the grawlix characters to be used as replacements, if grawlix is the current replacementMethod.
 
 ```javascript
-var filter = require('filter');
+var filter = require('profanity-filter');
 filter.setGrawlixChars(['1', '2', '3', '4', '5', '6']);
 ```
 
@@ -68,7 +68,7 @@ filter.setGrawlixChars(['1', '2', '3', '4', '5', '6']);
 Adds a word to the internal replacement dictionary. The optional second parameter is used if the replacementMethod is set to 'word'. If the word method is set and no replacement is passed, the filter will default to 'BLEEP'.
 
 ```javascript
-var filter = require('filter');
+var filter = require('profanity-filter');
 filter.addWord('ass', 'badonkadonk');
 ```
 
@@ -77,6 +77,6 @@ filter.addWord('ass', 'badonkadonk');
 Removes a word from the internal replacement dicitonary.
 
 ```javascript
-var filter = require('filter');
+var filter = require('profanity-filter');
 filter.removeWord('ass');
 ```
