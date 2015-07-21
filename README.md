@@ -33,7 +33,7 @@ Populates the internal filter dictionary using a seed data JSON file (must live 
 
 ```javascript
 var filter = require('profanity-filter');
-filter.seed('profanities');
+filter.seed('profanity');
 ```
 
 ###filter.debug()
