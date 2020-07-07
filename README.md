@@ -36,7 +36,7 @@ var filter = require('profanity-filter');
 filter.seed('profanity');
 ```
 
-###filter.debug()
+### filter.debug()
 
 Returns the dictionary, replacementMethod, and grawlixChars internal properties for debugging purposes.
 
